@@ -1,0 +1,13 @@
+on: push
+jobs:
+  build-node:
+    runs-on: ubuntu-latest
+    container: node:16
+    steps:
+      - uses: actions/checkout@v3
+      - name: Nombre
+        run: node app.js
+      - name: Node Version
+        run: echo "Versión de Node -> $(node --version)"
+      - name: Expediente
+        run: echo "IS$((242424*3))"
